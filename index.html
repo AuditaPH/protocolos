@@ -1841,12 +1841,42 @@
   // Init
   updateProgress();
 
-  // Touch en tarjetas del menú para iOS
-  document.querySelectorAll('.card').forEach(card => {
-    card.addEventListener('touchend', function(e){
+  // ── BLOQUEAR PULL-TO-REFRESH en móvil ──
+  // Previene que el gesto de arrastrar hacia abajo recargue la página y borre el progreso
+  let lastTouchY = 0;
+  document.addEventListener('touchstart', function(e){
+    lastTouchY = e.touches[0].clientY;
+  }, { passive: true });
+  document.addEventListener('touchmove', function(e){
+    const currentY = e.touches[0].clientY;
+    const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+    // Solo bloquear si estamos en el tope del scroll y el gesto va hacia abajo
+    if(scrollTop === 0 && currentY > lastTouchY){
       e.preventDefault();
-      const idx = parseInt(this.getAttribute('data-section'));
-      openSection(idx);
+    }
+  }, { passive: false });
+
+  // ── TARJETAS: distinguir tap de scroll ──
+  // Solo abre la sección si el dedo no se movió más de 8px (es un tap, no scroll)
+  document.querySelectorAll('.card').forEach(card => {
+    let touchStartX = 0;
+    let touchStartY = 0;
+
+    card.addEventListener('touchstart', function(e){
+      touchStartX = e.touches[0].clientX;
+      touchStartY = e.touches[0].clientY;
+    }, { passive: true });
+
+    card.addEventListener('touchend', function(e){
+      const dx = Math.abs(e.changedTouches[0].clientX - touchStartX);
+      const dy = Math.abs(e.changedTouches[0].clientY - touchStartY);
+      // Solo actuar si fue un tap limpio (movimiento < 8px)
+      if(dx < 8 && dy < 8){
+        e.preventDefault();
+        const idx = parseInt(this.getAttribute('data-section'));
+        openSection(idx);
+      }
+      // Si hubo movimiento mayor, fue scroll — no hacer nada
     });
   });
 })();
