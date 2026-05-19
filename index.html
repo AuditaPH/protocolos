@@ -1387,23 +1387,36 @@
               <div class="gantt-month m27 gantt-divider-col">Ene</div><div class="gantt-month m27">Feb</div><div class="gantt-month m27">Mar</div>
             </div>
 
-            <!-- ROW 1: Auditoría -->
+            <!-- ROW 1: Auditoría — 15 celdas individuales -->
             <div class="gantt-body-row" style="background:#f8f9fc">
               <div class="gantt-row-label">Auditoría</div>
-              <!-- Ene–Dic 2026: full audit bar (12 cols) + Ene 2027 HP -->
-              <div class="gantt-cell" style="grid-column: span 12; padding:8px 0"><div class="g-bar audit" style="border-radius:3px 0 0 3px">&nbsp;</div></div>
-              <div class="gantt-cell m27 gantt-divider-col" style="padding:8px 0"><div class="g-bar hp" style="font-size:0.65rem;justify-content:center">Hechos<br>Posteriores</div></div>
-              <div class="gantt-cell m27" style="padding:8px 0"><div class="g-bar hp" style="border-radius:0 3px 3px 0;justify-content:center">&nbsp;</div></div>
-              <div class="gantt-cell m27"></div>
+              <div class="gantt-cell" style="padding:8px 0"><div class="g-bar audit" style="border-radius:3px 0 0 3px">&nbsp;</div></div>
+              <div class="gantt-cell" style="padding:8px 0"><div class="g-bar audit">&nbsp;</div></div>
+              <div class="gantt-cell" style="padding:8px 0"><div class="g-bar audit">&nbsp;</div></div>
+              <div class="gantt-cell" style="padding:8px 0"><div class="g-bar audit">&nbsp;</div></div>
+              <div class="gantt-cell" style="padding:8px 0"><div class="g-bar audit">&nbsp;</div></div>
+              <div class="gantt-cell" style="padding:8px 0"><div class="g-bar audit">&nbsp;</div></div>
+              <div class="gantt-cell" style="padding:8px 0"><div class="g-bar audit">&nbsp;</div></div>
+              <div class="gantt-cell" style="padding:8px 0"><div class="g-bar audit">&nbsp;</div></div>
+              <div class="gantt-cell" style="padding:8px 0"><div class="g-bar audit">&nbsp;</div></div>
+              <div class="gantt-cell" style="padding:8px 0"><div class="g-bar audit">&nbsp;</div></div>
+              <div class="gantt-cell" style="padding:8px 0"><div class="g-bar audit">&nbsp;</div></div>
+              <div class="gantt-cell" style="padding:8px 0"><div class="g-bar audit" style="border-radius:0 3px 3px 0">&nbsp;</div></div>
+              <!-- HP: Ene, Feb y Mar 2027 -->
+              <div class="gantt-cell m27 gantt-divider-col" style="padding:8px 0"><div class="g-bar hp" style="font-size:0.65rem;justify-content:center;border-radius:3px 0 0 3px">Hechos<br>Posteriores</div></div>
+              <div class="gantt-cell m27" style="padding:8px 0"><div class="g-bar hp" style="border-radius:0">&nbsp;</div></div>
+              <div class="gantt-cell m27" style="padding:8px 0"><div class="g-bar hp" style="border-radius:0 3px 3px 0">&nbsp;</div></div>
             </div>
 
-            <!-- ROW 2: Cuentas de Cobro -->
+            <!-- ROW 2: Cuentas de Cobro — 15 celdas individuales -->
             <div class="gantt-body-row">
               <div class="gantt-row-label">Cuentas de Cobro</div>
-              <!-- Ene–Feb: sand (sin cobro aún) -->
-              <div class="gantt-cell" style="padding:8px 0"><div class="g-bar cobro-off" style="border-radius:3px 0 0 3px">&nbsp;</div></div>
-              <div class="gantt-cell" style="padding:8px 0"><div class="g-bar cobro-off">&nbsp;</div></div>
-              <!-- Mar–Dic: brown cobro -->
+              <!-- Ene–Mar 2026: vacíos -->
+              <div class="gantt-cell"></div>
+              <div class="gantt-cell"></div>
+              <div class="gantt-cell"></div>
+              <!-- Abr 2026 – Mar 2027: barra café continua -->
+              <div class="gantt-cell" style="padding:8px 0"><div class="g-bar cobro" style="border-radius:3px 0 0 3px">&nbsp;</div></div>
               <div class="gantt-cell" style="padding:8px 0"><div class="g-bar cobro">&nbsp;</div></div>
               <div class="gantt-cell" style="padding:8px 0"><div class="g-bar cobro">&nbsp;</div></div>
               <div class="gantt-cell" style="padding:8px 0"><div class="g-bar cobro">&nbsp;</div></div>
@@ -1412,36 +1425,34 @@
               <div class="gantt-cell" style="padding:8px 0"><div class="g-bar cobro">&nbsp;</div></div>
               <div class="gantt-cell" style="padding:8px 0"><div class="g-bar cobro">&nbsp;</div></div>
               <div class="gantt-cell" style="padding:8px 0"><div class="g-bar cobro">&nbsp;</div></div>
-              <div class="gantt-cell" style="padding:8px 0"><div class="g-bar cobro">&nbsp;</div></div>
-              <div class="gantt-cell" style="padding:8px 0"><div class="g-bar cobro" style="border-radius:0 3px 3px 0">&nbsp;</div></div>
-              <!-- 2027 -->
-              <div class="gantt-cell m27 gantt-divider-col"></div><div class="gantt-cell m27"></div><div class="gantt-cell m27"></div>
+              <div class="gantt-cell m27 gantt-divider-col" style="padding:8px 0"><div class="g-bar cobro">&nbsp;</div></div>
+              <div class="gantt-cell m27" style="padding:8px 0"><div class="g-bar cobro">&nbsp;</div></div>
+              <div class="gantt-cell m27" style="padding:8px 0"><div class="g-bar cobro" style="border-radius:0 3px 3px 0">&nbsp;</div></div>
             </div>
 
-            <!-- ROW 3: Etapas -->
+            <!-- ROW 3: Etapas — 15 celdas individuales -->
             <div class="gantt-body-row" style="background:#f8f9fc">
               <div class="gantt-row-label">Etapas</div>
-              <!-- Ene vacío -->
+              <!-- Ene–Mar vacíos -->
               <div class="gantt-cell"></div>
-              <!-- Feb vacío -->
               <div class="gantt-cell"></div>
-              <!-- Mar–May: CP/Planeación (3 cols) -->
+              <div class="gantt-cell"></div>
+              <!-- Abr–Jun: CP/Planeación (3 cols) -->
               <div class="gantt-cell" style="padding:8px 0"><div class="g-bar cp" style="border-radius:3px 0 0 3px">CP / Planeación</div></div>
-              <div class="gantt-cell" style="padding:8px 0"><div class="g-bar cp">&nbsp;</div></div>
-              <div class="gantt-cell" style="padding:8px 0"><div class="g-bar cp" style="border-radius:0 3px 3px 0">&nbsp;</div></div>
-              <!-- Jun–Ago: Ejecución (3 cols) -->
-              <div class="gantt-cell" style="padding:8px 0"><div class="g-bar ejec" style="border-radius:3px 0 0 3px">Ejecución</div></div>
-              <div class="gantt-cell" style="padding:8px 0"><div class="g-bar ejec">&nbsp;</div></div>
-              <div class="gantt-cell" style="padding:8px 0"><div class="g-bar ejec" style="border-radius:0 3px 3px 0">&nbsp;</div></div>
-              <!-- Sep–Nov: Ejecución (3 cols) -->
-              <div class="gantt-cell" style="padding:8px 0"><div class="g-bar ejec" style="border-radius:3px 0 0 3px">Ejecución</div></div>
-              <div class="gantt-cell" style="padding:8px 0"><div class="g-bar ejec">&nbsp;</div></div>
-              <div class="gantt-cell" style="padding:8px 0"><div class="g-bar ejec" style="border-radius:0 3px 3px 0">&nbsp;</div></div>
-              <!-- Dic–Ene: Finalización (2 cols) -->
-              <div class="gantt-cell" style="padding:8px 0"><div class="g-bar final" style="border-radius:3px 0 0 3px">Finalización</div></div>
-              <div class="gantt-cell m27 gantt-divider-col" style="padding:8px 0"><div class="g-bar final" style="border-radius:0 3px 3px 0">&nbsp;</div></div>
-              <div class="gantt-cell m27"></div>
-              <div class="gantt-cell m27"></div>
+              <div class="gantt-cell" style="padding:8px 0"><div class="g-bar cp" style="border-radius:0">&nbsp;</div></div>
+              <div class="gantt-cell" style="padding:8px 0"><div class="g-bar cp" style="border-radius:0">&nbsp;</div></div>
+              <!-- Jul–Sep: Ejecución (3 cols) -->
+              <div class="gantt-cell" style="padding:8px 0"><div class="g-bar ejec" style="border-radius:0">Ejecución</div></div>
+              <div class="gantt-cell" style="padding:8px 0"><div class="g-bar ejec" style="border-radius:0">&nbsp;</div></div>
+              <div class="gantt-cell" style="padding:8px 0"><div class="g-bar ejec" style="border-radius:0">&nbsp;</div></div>
+              <!-- Oct–Dic: Ejecución (3 cols) -->
+              <div class="gantt-cell" style="padding:8px 0"><div class="g-bar ejec" style="border-radius:0">Ejecución</div></div>
+              <div class="gantt-cell" style="padding:8px 0"><div class="g-bar ejec" style="border-radius:0">&nbsp;</div></div>
+              <div class="gantt-cell" style="padding:8px 0"><div class="g-bar ejec" style="border-radius:0">&nbsp;</div></div>
+              <!-- Ene–Mar 2027: Finalización (3 cols) -->
+              <div class="gantt-cell m27 gantt-divider-col" style="padding:8px 0"><div class="g-bar final" style="border-radius:3px 0 0 3px">Finalización</div></div>
+              <div class="gantt-cell m27" style="padding:8px 0"><div class="g-bar final" style="border-radius:0">&nbsp;</div></div>
+              <div class="gantt-cell m27" style="padding:8px 0"><div class="g-bar final" style="border-radius:0 3px 3px 0">&nbsp;</div></div>
             </div>
 
             <!-- MILESTONES -->
@@ -1449,17 +1460,17 @@
               <div></div>
               <!-- Ene vacío -->
               <div></div>
-              <!-- Feb: Elección -->
+              <!-- Feb vacío -->
+              <div></div>
+              <!-- Mar: Elección -->
               <div style="display:flex;flex-direction:column;align-items:center;padding-top:4px">
                 <div style="width:0;height:0;border-left:7px solid transparent;border-right:7px solid transparent;border-top:0;border-bottom:12px solid var(--navy2)"></div>
                 <div style="width:2px;height:16px;background:var(--navy2)"></div>
                 <div style="font-size:0.72rem;font-weight:700;color:var(--navy);text-align:center;line-height:1.3">Elección<br><span style="font-size:0.66rem;color:var(--navy2);font-style:italic">Mar 2026</span></div>
               </div>
-              <!-- Apr–Nov vacíos -->
-              <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
-              <!-- Dic vacío -->
-              <div></div>
-              <!-- Ene 2027: Dictamen -->
+              <!-- Abr–Dic vacíos (9 cols) -->
+              <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+              <!-- Ene/Feb 2027: Dictamen (en la línea divisoria) -->
               <div style="display:flex;flex-direction:column;align-items:center;padding-top:4px;border-left:2px dashed #9fa3bb">
                 <div style="width:0;height:0;border-left:7px solid transparent;border-right:7px solid transparent;border-bottom:12px solid var(--navy2)"></div>
                 <div style="width:2px;height:16px;background:var(--navy2)"></div>
