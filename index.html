@@ -1012,6 +1012,28 @@
     .gantt-month { font-size: 0.6rem; padding: 0.2rem 0; }
     .gantt-row-label { font-size: 0.7rem; padding-left: 0.3rem; }
 
+    /* Fix alineación divisor Dic/Ene 2027 en móvil:
+       reemplaza border-left (que desplaza la celda) por pseudo-elemento */
+    .gantt-divider-col {
+      border-left: none !important;
+      position: relative;
+    }
+    .gantt-divider-col::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: repeating-linear-gradient(
+        to bottom,
+        #9fa3bb 0px, #9fa3bb 4px,
+        transparent 4px, transparent 8px
+      );
+      pointer-events: none;
+      z-index: 1;
+    }
+
     /* ── Componentes ── */
     .etapa-body { padding: 0.65rem 0.75rem; }
     .etapa-title { font-size: 0.82rem; }
